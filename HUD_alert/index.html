@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+   <meta charset="utf-8">
+   <title>Overspeed popup | MERNcenaries</title>
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+
+<body>
+   <div class="alert">
+      <span class="msg">REDUCE SPEED! SPEED LIMIT EXCEEDED</span>
+   </div>
+   <script>
+      function test() {
+         $('.alert').addClass("show");
+         $('.alert').removeClass("hide");
+         $('.alert').addClass("showAlert");
+         setTimeout(function () {
+            $('.alert').removeClass("show");
+            $('.alert').addClass("hide");
+         }, 5000);
+         ;
+         $('.close-btn').click(function () {
+            $('.alert').removeClass("show");
+            $('.alert').addClass("hide");
+         });
+      }
+
+      var testing = prompt("Enter the current speed (for simulation purposes): ");
+
+      if (testing > 45) {
+         test();
+      }
+
+   </script>
+</body>
+
+</html>
